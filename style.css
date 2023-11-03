@@ -1,0 +1,180 @@
+body{
+    background: var(--backgroundC);
+    width: 100%;
+    height: 100%;
+   
+}
+
+main{
+    width: 100%;
+    height: 60vh;
+    
+}
+
+:root{
+    --inputC: #24273A;
+    --borderC: 1px solid white;
+    --backgroundC: #24273A; /* Set the background color to black */
+    --color: white;
+    --borderBot: 1px solid #c7c1c1;
+}
+
+.colors{
+    --inputC: #f9f9f9;
+    --borderC: 1px solid rgb(5, 0, 0);
+    --backgroundC: #fcfcfd; /* Set the background color to black */
+    --color: black;
+    --borderBot: 1px solid #060606;
+}
+
+
+.banner{
+    background: url("./images/bg-desktop-dark.jpg") no-repeat center/cover;
+    width: 100%;
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-header1{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50vh;
+}
+.todo-header1 h1{
+    
+    color: white;
+}
+
+
+form input{
+    background: var(--inputC);
+    width: 100%;
+    padding: 15px 0 15px 15px;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    border: none;
+    color: var(--color);
+    
+}
+
+.circular-checkbox {
+    position: relative;
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Should match the width for a perfect circle */
+    
+}
+
+.circular-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    
+    display: flex;
+    
+}
+
+.circular-checkbox label {
+    display: flex; /* Add flexbox properties */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 100%;
+    border: var(--borderC); /* Border color for the circular checkbox */
+    border-radius: 50%; /* Makes it a circle */
+    cursor: pointer;
+}
+
+.circular-checkbox input[type="checkbox"]:checked + label {
+    background:linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)); /* Background color when the checkbox is checked */
+    
+}
+
+ul {
+    list-style-type: none;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+
+
+.sun-light{
+    background: transparent;
+    border: none;
+}
+
+.lists{
+    margin-top: 2rem;
+}
+
+.lists li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--backgroundC); /* Set the background color to black */
+    
+    border-bottom: 1px solid #c7c1c1;
+    
+    
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: hsl(234, 11%, 52%);
+    padding: 0.1rem 0.9rem;
+    background: hsl(235, 24%, 19%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+
+.choice{
+    display: flex;
+    gap: 1rem;
+}
+
+.active{
+    color: hsl(220, 98%, 61%);
+}
+
+.lists li p{
+    margin-left: 0.7rem;
+    color: var(--color);
+}
+
+.todo-li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.li-con{
+    display: flex;
+    align-items: center;
+}
+
+.li-con input{
+    margin-left: 0.5rem;
+}
+
+.close{
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.todo-li:hover .close{
+    opacity: 1;
+}
